@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_ROUTE = os.path.dirname(os.path.realpath(__file__))
+MEDIA_ROOT = os.path.join(PROJECT_ROUTE, 'uploads')
+MEDIA_URL = 'uploads/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
