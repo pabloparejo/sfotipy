@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content_section %}
+
+<section class="container wrap center-block">
+
+	{% for i in range %} {# First test #}
+        <article class="song">
+            <figure class="image">
+                <img src="{{STATIC_URL}}img/songs/girl.jpg" alt="Pharrel Williams - Girl">
+            </figure>
+
+            <p class="name">
+                Girl
+            </p>
+
+            <p class="author">
+                Pharrel Williams
+            </p>
+
+        </article>
+    {% endfor %}
+    </section>
+
+{% endblock %}

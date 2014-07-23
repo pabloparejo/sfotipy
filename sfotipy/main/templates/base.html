@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="{{STATIC_URL}}css/base.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta charset="UTF-8">
+    <title>Sfotipy!</title>
+</head>
+<body>
+    <header class="header relative border-bottom">
+        <div class="desktop-head">
+            <div class="wrap center-block">
+                <figure class="image medium left logo">
+                    <img src="{{STATIC_URL}}img/logo.png" alt="">
+                </figure>
+                <div class="user right">
+                    <figure class="avatar round left">
+                        <img src="{{STATIC_URL}}img/avatar/parejorejo.png" alt="@parejorejo">
+                    </figure>
+                    <span class="username left light-grey">
+                        {{user}}
+                    </span>
+                </div>
+                <div class="search right">
+                    <form action="" class="relative">
+                        <span class="search-icon icon-search light-grey"></span>
+                        <input class="input-text" type="text" placeholder="Search">
+                        <span class="close-icon light-grey">x</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn-menu">
+            <span class="icon-menu"></span>
+        </a>
+        <nav class="menu">
+            <ul class="list wrap center-block">
+                <li class="item"><a id="home" href="/">Top hits</a></li>
+                <li class="item"><a id="player" href="/player">Player</a></li>
+                <li class="item"><a id="playlist" href="#">PlayList</a></li>
+                <li class="item"><a id="profile" href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <span>Top hits</span>
+        </div>
+    </header>
+
+    {% block content_section %}
+    {% endblock %}
+
+    <script src='{{STATIC_URL}}js/lib/underscore.js'></script>
+    <script src='{{STATIC_URL}}js/lib/backbone.js'></script>
+    <script src='{{STATIC_URL}}js/lib/jquery.js'></script>
+    <script src='{{STATIC_URL}}js/code.js'></script>
+
+</body>
+</html>

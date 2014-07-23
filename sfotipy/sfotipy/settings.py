@@ -13,8 +13,14 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 PROJECT_ROUTE = os.path.dirname(os.path.realpath(__file__))
-MEDIA_ROOT = os.path.join(PROJECT_ROUTE, 'uploads')
-MEDIA_URL = 'uploads/'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROUTE, 'upload')
+MEDIA_URL = '/upload/'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROUTE, 'static'),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -43,6 +49,7 @@ INSTALLED_APPS = (
     'albums',
     'artists',
     'tracks',
+    'main',
 )
 
 MIDDLEWARE_CLASSES = (

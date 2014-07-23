@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content_section %}
+
+<section class="playing small large">
+        <div class="current">        
+            <figure class="image relative">
+                    <img src="{{STATIC_URL}}img/songs/girl.jpg" alt="Pharrel Williams - Come Get It Bae">
+                    <div class="actions padding right-text">
+                        <a href="" class="action icon-add"></a>
+                        <a href="" class="action icon-love"></a>
+                        <a href="" class="action icon-share"></a>
+                    </div class="actions">
+                </figure>
+                <div class="padding">
+                    <div class="progress">
+                        <span class="min">1:15</span>
+                        <div class="total">
+                            <div class="state">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <span class="max">3:45</span>
+                    </div>
+                    <div class="description center-text border-bottom">
+                        <p class="name">
+                            {{song.title}}
+                        </p>
+                        <p class="author">
+                            {{song.artist}}
+                        </p>
+                    </div>
+                    <div class="play center-text vertical-padding">
+                        <a href="" class="action light-grey icon-prev"></a>
+                        <a href="" class="action light-grey icon-play active"></a>
+                        <a href="" class="action light-grey icon-next"></a>
+                        <a href="" class="action light-grey icon-random"></a>
+                        <a href="" class="action light-grey icon-vol"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist right">
+                <div class="border-bottom">
+                    <p class="name">
+                        Girl
+                    </p>
+                    <p class="author">
+                        Pharrel Williams
+                    </p>
+                </div>
+
+                <ul class="list">
+                	{% for i in range %} {# First test #}
+                    <li class="item border-bottom">
+                        <span>Marilyn Monroe</span>
+                        <span class="right">                        
+                            <a href="" class="action light-grey icon-add"></a>
+                            <a href="" class="action light-grey icon-love"></a>
+                            <a href="" class="action light-grey icon-share"></a>
+                        </span>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+    </section>
+
+{% endblock %}
