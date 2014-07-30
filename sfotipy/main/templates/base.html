@@ -50,11 +50,17 @@
     </header>
 
     {% block content_section %}
-    {% endblock %}
+    {% endblock content_section %}
 
+
+    {% block handlebars_templates %}
+    {% endblock handlebars_templates %}
+
+
+    <script src='{{STATIC_URL}}js/lib/jquery.js'></script>
     <script src='{{STATIC_URL}}js/lib/underscore.js'></script>
     <script src='{{STATIC_URL}}js/lib/backbone.js'></script>
-    <script src='{{STATIC_URL}}js/lib/jquery.js'></script>
+    <script src='{{STATIC_URL}}js/lib/handlebars.js'></script>
     <script src='{{STATIC_URL}}js/code.js'></script>
 
 </body>
