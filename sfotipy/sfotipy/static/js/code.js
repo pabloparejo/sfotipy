@@ -70,6 +70,3 @@ Backbone.history.start({pushState: true})
 
 window.Sfotipy = Sfotipy;
 
-
-
-
