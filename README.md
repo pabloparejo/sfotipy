@@ -1,9 +1,9 @@
 sfotipy
 =======
 
-Professional Backend (mejorando.la course) - Source Code
+A backend course project similar to spotify.
 
-If you want this to work, install these packages
+Dependencies (pip)
 ------
 
 >Django==1.6.2
@@ -15,4 +15,3 @@ If you want this to work, install these packages
 >wsgiref==0.1.2
 
 
-pip install [package name]
