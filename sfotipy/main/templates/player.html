@@ -68,16 +68,17 @@
 {% endblock content_section %}
 
 {% block handlebars_templates %}
+    <script id="song-template" type="text/x-handlebars-template">
     {% verbatim %}
-        <script id="song-template" type="text/x-handlebars-template">
+        <li class="item border-bottom">
             <span>{{name}} - {{author}}</span>
             <span class="right">                        
                 <a href="" class="action light-grey icon-add"></a>
                 <a href="" class="action light-grey icon-love"></a>
                 <a href="" class="action light-grey icon-share"></a>
             </span>
-        </script>
+    </li>
     {% endverbatim %}
+    </script>
 
 {% endblock handlebars_templates %}
-
