@@ -8,10 +8,13 @@ from tracks.models import Track
 
 def home(request):
 	albums = Album.objects.all()
+
+	title = "Top hits"
 	range = xrange(10)
 	return render(request, 'song_list.html', locals())
 
 def playing(request):
 	song = Track.objects.all()
+	title = "Player"
 	range = xrange (10)
 	return render(request, 'player.html', locals())

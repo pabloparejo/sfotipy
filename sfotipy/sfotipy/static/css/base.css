@@ -400,8 +400,12 @@ ul {
   padding: 0 0 0 3em;
   width: 24.5em;
 }
+.playlist .author {
+  margin-top: 0;
+}
 .playlist .name {
   font-size: 1.25em;
+  margin: 0;
 }
 .playlist .list {
   list-style: none;

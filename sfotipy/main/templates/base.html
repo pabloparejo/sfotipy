@@ -13,9 +13,12 @@
     <header class="header relative border-bottom">
         <div class="desktop-head">
             <div class="wrap center-block">
-                <figure class="image medium left logo">
-                    <img src="{{STATIC_URL}}img/logo.png" alt="">
-                </figure>
+                <a href="/">
+                    <figure class="image medium left logo">
+                        <img src="{{STATIC_URL}}img/logo.png" alt="">
+                    </figure>
+                </a>
+
                 <div class="user right">
                     <figure class="avatar round left">
                         <img src="{{STATIC_URL}}img/avatar/parejorejo.png" alt="@parejorejo">
@@ -45,16 +48,20 @@
             </ul>
         </nav>
         <div class="title">
-            <span>Top hits</span>
+            <span>{{ title }}</span>
         </div>
     </header>
 
     {% block content_section %}
-    {% endblock %}
+    {% endblock content_section %}
 
+    {% block handlebars_templates %}
+    {% endblock handlebars_templates %}
+
+    <script src='{{STATIC_URL}}js/lib/jquery.js'></script>
     <script src='{{STATIC_URL}}js/lib/underscore.js'></script>
     <script src='{{STATIC_URL}}js/lib/backbone.js'></script>
-    <script src='{{STATIC_URL}}js/lib/jquery.js'></script>
+    <script src='{{STATIC_URL}}js/lib/handlebars.js'></script>
     <script src='{{STATIC_URL}}js/code.js'></script>
 
 </body>
