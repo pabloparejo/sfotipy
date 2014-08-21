@@ -5,7 +5,7 @@
 <section class="playing small large">
         <div class="current">        
             <figure class="image relative">
-                    <img src="{{STATIC_URL}}img/songs/girl.jpg" alt="Pharrel Williams - Come Get It Bae">
+                    <img src="{{MEDIA_URL}}{{album.cover}}" alt="{{album.title}} - {{artist.first_name}}">
                     <div class="actions padding right-text">
                         <a href="" class="action icon-add"></a>
                         <a href="" class="action icon-love"></a>
@@ -24,10 +24,10 @@
                     </div>
                     <div class="description center-text border-bottom">
                         <p class="name">
-                            {{song.title}}
+                            {{song|capfirst}}
                         </p>
                         <p class="author">
-                            {{song.artist}}
+                            {{artist.first_name|capfirst}} {{artist.last_name|capfirst}}
                         </p>
                     </div>
                     <div class="play center-text vertical-padding">
@@ -42,17 +42,17 @@
             <div class="playlist right">
                 <div class="border-bottom">
                     <p class="name">
-                        Girl
+                        {{song|capfirst}}
                     </p>
                     <p class="author">
-                        Pharrel Williams
+                        {{artist.first_name|capfirst}} {{artist.last_name|capfirst}}
                     </p>
                 </div>
 
                 <ul class="list">
-                	{% for i in range %} {# First test #}
+                	{% for track in album.track_set.all %} {# First test #}
                     <li class="item border-bottom">
-                        <span>Marilyn Monroe</span>
+                        <span>{{track}}</span>
                         <span class="right">                        
                             <a href="" class="action light-grey icon-add"></a>
                             <a href="" class="action light-grey icon-love"></a>
@@ -77,7 +77,7 @@
                 <a href="" class="action light-grey icon-love"></a>
                 <a href="" class="action light-grey icon-share"></a>
             </span>
-    </li>
+        </li>
     {% endverbatim %}
     </script>
 

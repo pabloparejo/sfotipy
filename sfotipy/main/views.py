@@ -14,7 +14,9 @@ def home(request):
 	return render(request, 'song_list.html', locals())
 
 def playing(request):
-	song = Track.objects.all()
+	song = Track.objects.all()[0]
+	album = song.album
+	artist = song.artist
 	title = "Player"
 	range = xrange (10)
 	return render(request, 'player.html', locals())

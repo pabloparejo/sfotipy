@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-
+from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
@@ -13,4 +13,6 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.home'),
     url(r'^player/$', 'main.views.playing'),
     url(r'^tracks/(?P<title>[\w\-]+)', 'tracks.views.track_view'),
+    url(r'^upload/(?P<path>.*)$', 'django.views.static.serve',
+    				{'document_root':settings.MEDIA_ROOT}),
 )
